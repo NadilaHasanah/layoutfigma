@@ -40,13 +40,26 @@
         }
 
         ul li a {
-            text-decoration: none;
             color: black;
         }
 
 
         .produk {
             height: 100dvh;
+            position: relative;
+        }
+
+        tr td p {
+            display: none;
+            background-color: #474F7A;
+            min-width: 100px;
+            padding: 12px 10px;
+            z-index: 2;
+            color: white;
+        }
+
+        td:hover p {
+            display: block;
         }
 
         #produk {
@@ -94,17 +107,26 @@
                         <th>Harga</th>
                     </tr>
                     <tr>
-                        <td>Jeruk Manis</td>
+                        <td>
+                            Jeruk Manis
+                            <p>Minuman yang memiliki <br> kandungan vitamin C dan <br> sangat cocok untuk dicoba</p>
+                        </td>
                         <td><img src="jeruk.jpg" alt="Jeruk manis"></td>
                         <td>Rp 15.000</td>
                     </tr>
                     <tr>
-                        <td>Jeruk Nipis</td>
+                        <td>
+                            Jeruk Nipis
+                            <p>Minuman yang rasanya <br> sedikit asam & dingin, <br> memiliki banyak manfaat</p>
+                        </td>
                         <td><img src="jeruk-nipis.jpg" alt="Jeruk nipis"></td>
                         <td>Rp 12.000</td>
                     </tr>
                     <tr>
-                        <td>Nanas Jeruk</td>
+                        <td>
+                            Nanas Jeruk
+                            <p>Minuman dengan campuran <br> rasa ini sangat unik, <br> rasa yang asam manis</p>
+                        </td>
                         <td><img src="nanas-serut.jpg" alt="Nanas jeruk"></td>
                         <td>Rp 15.000</td>
                     </tr>
