@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatecoa</title>
+    <style>
+        body {
+            background-color: #9DBC98;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 2rem 3rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 50%;
+            height: 500px;
+            background-color: #F8FAE5;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        ul li {
+            list-style-type: none;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .produk {
+            height: 100dvh;
+        }
+
+        #produk {
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+        }
+
+        footer {
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            background-color: #9DBC98;
+            height: 95px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Chatecoa</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="produk">
+            <h3>Produk</h3>
+            <div class="produk">
+                <table border="2px">
+                    <tr>
+                        <th>Nama</th>
+                        <th>Gambar</th>
+                        <th>Harga</th>
+                    </tr>
+                    <tr>
+                        <td>Jeruk Manis</td>
+                        <td><img src="jeruk.jpg" alt="Jeruk manis"></td>
+                        <td>Rp 15.000</td>
+                    </tr>
+                    <tr>
+                        <td>Jeruk Nipis</td>
+                        <td><img src="jeruk-nipis.jpg" alt="Jeruk nipis"></td>
+                        <td>Rp 12.000</td>
+                    </tr>
+                    <tr>
+                        <td>Nanas Jeruk</td>
+                        <td><img src="nanas-serut.jpg" alt="Nanas jeruk"></td>
+                        <td>Rp 15.000</td>
+                    </tr>
+                    <tr>
+                        <td>Soda Buah</td>
+                        <td><img src="soda buah.jpeg" alt="soda"></td>
+                        <td>Rp 16.000</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy dilachatecoa.2024
+    </footer>
+</body>
+
+</html>
