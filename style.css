@@ -147,12 +147,14 @@ footer {
       padding: 20px 10px;
     }
   
-    main .img {
+    main.img {
       width: 200px !important;
       height: 230px !important;
       float: none;
       position: static;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
     }
 }
 
