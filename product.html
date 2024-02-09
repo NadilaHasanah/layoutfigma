@@ -32,15 +32,61 @@
         ul {
             display: flex;
             gap: 30px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #9DBC98;
         }
 
         ul li {
             list-style-type: none;
+            float: left;
 
         }
 
-        ul li a {
+        ul li a,
+        .dropbtn {
             color: black;
+            display: inline-block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #43766C;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #9DBC98;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #43766C;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+
         }
 
 
@@ -49,16 +95,22 @@
             position: relative;
         }
 
-        tr td p {
+        .dropdown-tbl {
+            position: relative;
+        }
+
+        .dropdown-content-tbl {
             display: none;
-            background-color: #474F7A;
-            min-width: 100px;
-            padding: 12px 10px;
-            z-index: 2;
+            position: absolute;
+            background-color: #43766C;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
             color: white;
         }
 
-        td:hover p {
+        .dropdown-tbl:hover .dropdown-content-tbl {
             display: block;
         }
 
@@ -79,6 +131,84 @@
             background-color: #9DBC98;
             height: 95px;
         }
+
+        #hamburger {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                display: flex;
+                height: 100dvh;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            ul {
+                font-size: 12px;
+            }
+
+            header {
+                font-size: 16px;
+            }
+
+            .content {
+                align-items: center;
+            }
+
+            h4 {
+                padding: 0;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            main .img {
+                width: 200px !important;
+                height: 230px !important;
+                float: none;
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .hidden {
+                display: none;
+            }
+
+            #hamburger {
+                display: block;
+                color: #43766C;
+            }
+
+            .container {
+                flex-wrap: wrap;
+                width: 78%;
+                padding: 10px 50px;
+            }
+
+            .container ul {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            #produk {
+                margin-top: 55px;
+            }
+
+            .produk table {
+                width: auto;
+            }
+        }
     </style>
 </head>
 
@@ -88,11 +218,20 @@
             <h2>Chatecoa</h2>
         </header>
         <nav>
-            <ul>
+            <div id="hamburger" style="font-size: 30px;">=</div>
+            <ul id="menu" class="hidden">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="product.html">Product</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="product.html" class="dropbtn">Product</a>
+                    <div class="dropdown-content">
+                        <a href="#">Jeruk Manis</a>
+                        <a href="#">Jeruk Nipis</a>
+                        <a href="#">Nanas Jeruk</a>
+                        <a href="#">Soda Buah</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>
@@ -107,32 +246,40 @@
                         <th>Harga</th>
                     </tr>
                     <tr>
-                        <td>
-                            Jeruk Manis
-                            <p>Minuman yang memiliki <br> kandungan vitamin C dan <br> sangat cocok untuk dicoba</p>
+                        <td class="dropdown-tbl">
+                            <span>Jeruk Manis</span>
+                            <div class="dropdown-content-tbl">
+                                <p>Minuman yang memiliki kandungan vitamin C dan sangat cocok untuk dicoba</p>
+                            </div>
                         </td>
-                        <td><img src="jeruk.jpg" alt="Jeruk manis"></td>
+                        <td><img src="img/jeruk.jpg" alt="Jeruk manis"></td>
                         <td>Rp 15.000</td>
                     </tr>
                     <tr>
-                        <td>
-                            Jeruk Nipis
-                            <p>Minuman yang rasanya <br> sedikit asam & dingin, <br> memiliki banyak manfaat</p>
+                        <td class="dropdown-tbl"><span>Jeruk Nipis</span>
+                            <div class="dropdown-content-tbl">
+                                <p>Minuman yang rasanya sedikit asam & dingin, memiliki banyak manfaat</p>
+                            </div>
                         </td>
-                        <td><img src="jeruk-nipis.jpg" alt="Jeruk nipis"></td>
+                        <td><img src="img/jeruk-nipis.jpg" alt="Jeruk nipis"></td>
                         <td>Rp 12.000</td>
                     </tr>
                     <tr>
-                        <td>
-                            Nanas Jeruk
-                            <p>Minuman dengan campuran <br> rasa ini sangat unik, <br> rasa yang asam manis</p>
+                        <td class="dropdown-tbl">
+                            <span>Nanas Jeruk</span>
+                            <div class="dropdown-content-tbl">
+                                <p>Minuman dengan campuran rasa ini sangat unik, rasa yang asam manis</p>
+                            </div>
                         </td>
-                        <td><img src="nanas-serut.jpg" alt="Nanas jeruk"></td>
+                        <td><img src="img/nanas-serut.jpg" alt="Nanas jeruk"></td>
                         <td>Rp 15.000</td>
                     </tr>
                     <tr>
-                        <td>Soda Buah</td>
-                        <td><img src="soda buah.jpeg" alt="soda"></td>
+                        <td class="dropdown-tbl"><span>Soda Buah</span>
+                            <div class="dropdown-content-tbl">
+                                <p>Minuman bebas gula dan cocok untuk menghilangkan rasa lelah</p>
+                        </td>
+                        <td><img src="img/soda buah.jpeg" alt="soda"></td>
                         <td>Rp 16.000</td>
                     </tr>
                 </table>
@@ -142,6 +289,14 @@
     <footer>
         &copy dilachatecoa.2024
     </footer>
+    <script>
+        const Hamburger = document.getElementById('hamburger')
+        const Menu = document.getElementById('menu')
+
+        Hamburger.addEventListener('click', () => {
+            Menu.classList.toggle('hidden')
+        })
+    </script>
 </body>
 
 </html>

@@ -14,30 +14,48 @@
             <h2>Chatecoa</h2>
         </header>
         <nav>
-            <ul>
+            <div id="hamburger" style="font-size: 30px;">=</div>
+            <ul id="menu" class="hidden">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="product.html">Product</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="product.html" class="dropbtn">Product</a>
+                    <div class="dropdown-content">
+                        <a href="#">Jeruk Manis</a>
+                        <a href="#">Jeruk Nipis</a>
+                        <a href="#">Nanas Jeruk</a>
+                        <a href="#">Soda Buah</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>
     <main>
         <section class="content">
-        <h4>Halo, selamat datang</h4>
-        <h2>Temukan minuman segar
-            <br> di Chatecoa sesuai favoritmu
-        </h2>
-        <p>Jadilah langganan kami yang setia,
-            <br>Bergabung sekarang gratis</p>
-            <br>
-            <button class="btn-daftar">Gabung</button>
             <div class="img">
                 <img src="logo.png" alt="Chatecoa" width="400">
             </div>
-    </section>
+            <h4>Halo, selamat datang</h4>
+            <h2>Temukan minuman segar
+                <br> di Chatecoa sesuai favoritmu
+            </h2>
+            <p>Jadilah langganan kami yang setia,
+                <br>Bergabung sekarang gratis
+            </p>
+            <br>
+            <button class="btn-daftar">Gabung</button>
+        </section>
     </main>
     <footer>&copy dilachatecoa.2024</footer>
+    <script>
+        const Hamburger = document.getElementById('hamburger')
+        const Menu = document.getElementById('menu')
+
+        Hamburger.addEventListener('click', () => {
+            Menu.classList.toggle('hidden')
+        })
+    </script>
 </body>
 
 </html>
